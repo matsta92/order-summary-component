@@ -1,0 +1,162 @@
+@import variables
+
+*
+    margin: 0
+    padding: 0
+    box-sizing: border-box
+
+body
+    position: relative
+    display: flex
+    justify-content: center
+    align-items: center
+    width: 100%
+    height: 100vh
+    font-size: 16px
+    color: $desaturated-blue
+    font-family: 'Red Hat Display', sans-serif
+    background-image: url('../images/pattern-background-desktop.svg')
+    background-repeat: no-repeat
+    background-color: $pale-blue
+    background-size: 100%
+
+.order-summary-component
+    width: 450px
+    background-color: #fff
+    border-radius: 20px
+
+.hero-graphic
+    width: 100%
+    border-radius: 25px 25px 0px 0px
+
+.order-summary
+    margin: 40px 50px 25px 50px
+
+.order-summary-title
+    text-align: center
+    font-size: 28px
+    font-weight: 900
+    color: $dark-blue
+
+.order-summary-description
+    margin-top: 20px
+    text-align: center
+
+.order-summary-plan
+    position: relative
+    margin-top: 20px
+    display: flex
+    justify-content: space-between
+    align-items: center
+    background-color: $very-pale-blue
+    padding: 35px 25px
+    border-radius: 10px
+
+.icon-music
+    position: absolute
+    top: 50%
+    transform: translateY(-50%)
+
+.plan-type
+    position: absolute
+    left: 90px
+
+.plan-type-title
+    margin-bottom: 5px
+    font-weight: 900
+    color: $dark-blue
+
+.plan-type-change
+    text-decoration: underline
+    font-weight: 700
+    color: $bright-blue
+    transition: .3s color, .3s text-decoration-color
+    cursor: pointer
+
+.plan-type-change:hover
+    text-decoration-color: rgba(255,255,255,0)
+    color: hsl(245, 75%, 70%)
+
+.btn-payment, .btn-cancel
+    display: block
+    width: 100%
+    height: 50px
+    border: none
+    font-weight: 700
+    font-size: 15px
+
+
+.btn-payment
+    margin-top: 30px
+    background-color: $bright-blue
+    border-radius: 10px
+    color: #fff
+    box-shadow: 0px 20px 25px hsl(245, 75%, 90%)
+    transition: .3s background-color
+    cursor: pointer
+
+.btn-payment:hover
+    background-color: hsl(245, 75%, 70%)
+
+.btn-cancel
+    margin-top: 15px
+    background-color: rgba(255,255,255,0)
+    color: $desaturated-blue
+    transition: .3s color
+    cursor: pointer
+
+.btn-cancel:hover
+    color: $dark-blue
+
+
+footer
+    position: absolute
+    bottom: 0.1em
+    font-size: 11px
+    text-align: center
+
+footer a
+    color: hsl(228, 45%, 44%)
+
+@media (max-width: 475px)
+    body
+        background-image: url('../images/pattern-background-mobile.svg')
+    .order-summary-component
+        margin: 0 25px
+    
+    .order-summary
+        margin: 30px 25px 20px 25px
+
+    .order-summary-title
+        font-size: 22px
+
+    .order-summary-description
+        line-height: 25px
+
+    .order-summary-plan
+        padding: 30px 15px
+
+    .plan-type
+        left: 80px
+
+    .plan-type-change
+        font-size: 15px
+
+@media (max-width: 350px)
+    .order-summary-plan
+        display: flex
+        flex-direction: column
+        justify-content: center
+        align-items: center
+        padding: 10px
+
+    .icon-music
+        position: relative
+        top: 20px
+
+    .plan-type
+        position: relative
+        left: 0
+
+    .plan-type-change
+        margin-top: 10px
